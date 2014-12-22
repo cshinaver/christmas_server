@@ -23,13 +23,81 @@
             <div class="container">
                 <header class="major">
                     <h2>Assignment 1</h2>
-                    <p>The proverbial Hello World assignment. Complete it?</p>
+                    <h3>The proverbial Hello World assignment.</h3>
                 </header>
-                    <p>Create an app with a button that changes a label to
-                    "Hello World" when you press it. That is all.
-                    <br>
-                    I'll add pictures later. My code is up if you want an
-                    example.</p>
+                <p>
+                This is going to be our foray into Objective-C. We are going to
+                start using the command line to compile apps. The reason for
+                this is that it will allow you to see that Objective-C is just
+                a strict superset of C (i.e. C with more stuff). It will also
+                work if you don't have a mac around to use Xcode. We will start
+                with Xcode tutorials a little later on. First, I want to make
+                sure everyone undersands object orientation and objective-C in
+                general. 
+                <br>
+                <br>
+                Objective-C uses the NSLog() command to display output on the
+                console. Use this instead of printf statements when you want to
+                log something.
+                <br>
+                The NSLog() command takes a string argument. This is not a
+                C-String. It is an Objective-C string. Similarly to C++,
+                Objective-C has its own implemented string class. Objective-C
+                strings, henceforth referred to as NSStrings, are declared like
+                so: 
+                <br>
+                NSString *myString = @"Banana factory";
+                <br>
+                <br>
+                Note the asterick, @ sign and semicolon.
+                <br>
+                Every line does end with semicolon in ObjC. 'Nuff said.
+                <br>
+                NSStrings require @ to be in front of double quotes when
+                setting them. This is how Objc specifies the difference between
+                a C-String and an NSString.
+                <br>
+                The asterisk is interesting. Basically, Objective-C loves
+                pointers. Like loves them. It's ridiculous. Any Objective-C
+                types (all objects, most begin with NS) must be created using a
+                pointer.
+                <br>
+                If I wanted to define an Objective-C array, I would have to do
+                it this way:
+                <br>
+                NSArray *myArray = [NSArray arrayWithObjects:@"I ", @"love ",
+                [NSNumber numberWithInt:5], @" dogs", nil];
+                <br>
+                // nil is the sentinal value for the method arrayWithObjects
+                <br>
+                <br>
+                Sidenote: NSArrays can store any type.
+                </p>
+                <h3>The actual assignment</h3>
+                <p>
+                Create a hello world program that displays some text to the
+                console log. Don't use printf. Don't use xcode. Use your
+                favorite text editor (vim) and clang (gcc is "aliased" (more
+                or less) to clang on macs) to compile the program. On linux,
+                google how to compile objective-C. It's pretty straightforward.
+                <br>
+                My code is up if you want an
+                example.
+                </p>
+                <h3>Goals</h3>
+                <ul>
+                    <li>Solidify usage of git to point of second nature.</li>
+                    <li>Learn how to compile Objective-C from command line<br>
+                        IDEs tend to not tell the whole story
+                    </li>
+                    <li>Know that Objective-C uses #import instead of #include
+                        <br>
+                        Foundation is the main framework for Objective-C.
+                    </li>
+                    <li>Get feet wet with ObjC objects.</li>
+                </ul>
+
+                <h1>DON'T. ADD. BINARIES. TO. THE. REPO.<br>EVER.</h1>
             </div>
     </body>
 
