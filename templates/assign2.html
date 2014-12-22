@@ -1,0 +1,91 @@
+<html>
+	<head>
+		<title>Assignment 2</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="static/js/jquery.min.js"></script>
+		<script src="static/js/jquery.scrollzer.min.js"></script>
+		<script src="static/js/jquery.scrolly.min.js"></script>
+		<script src="static/js/skel.min.js"></script>
+		<script src="static/js/skel-layers.min.js"></script>
+		<script src="static/js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="static/css/skel.css" />
+			<link rel="stylesheet" href="static/css/style.css" />
+			<link rel="stylesheet" href="static/css/style-xlarge.css" />
+		</noscript>
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+	</head>
+    <body>
+        <div id="main">
+            <div class="container">
+                <header class="major">
+                    <h2>Assignment 2</h2>
+                    <h3>Objects, objects, and more objects</h3>
+                </header>
+                <p>
+                    As you probably already noticed, Objective-C has its own
+                    types for almost every C type. The important thing to
+                    remember is that each of these ObjC types is an object. It
+                    is also an instance of a class (instance and object are
+                    essentially interchangable). Each Objective-C object has
+                    its own methods that can be very useful. For example, to
+                    get the number of elements in an NSString, you can use the
+                    -length method. (- sign in front of a method means it is an
+                    instance method, meaning you use it on an instance of a
+                    class. + in front of a method means you use it on the class
+                    itself. Good explanation <a
+                        href="http://stackoverflow.com/questions/1053592/what-is-the-difference-between-class-and-instance-methods">here</a>.
+                    <br>
+                    NSString *myString = @"Fancy Feast is my friend";
+                    <br>
+                    NSUinteger *lenStr = [myString length];
+                    <br>
+                    Note: Objective-C is smart about it's classes, meaning you
+                    can write a for loop that requires an int as a bound, but
+                    use the return value of type NSUinteger.
+                    <br>
+                    E.g:
+                    <br>
+                    for (int i = 0; i < [myString length], i++) // Note the initialization of i in the statement and its type
+                    <br>
+                    {
+                    <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;NSLog(@"%C", [myString
+                        characterAtIndex:i]);  // -characterAtIndex returns a unichar, so %C, not %c
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;// Objective-C strings are not C-strings i.e. myString[i] does not work
+                    <br>
+                    }
+
+                <h3>The actual assignment</h3>
+                <p>
+                    Create an Objective-C array with multiple types (one
+                NSString, one int, and one NSNumber). Then print out the array
+                using one printf statement.
+                <br>
+                Hint: don't print each object individually. Create one string
+                from the objects and then print out the string. Hint++: you
+                will need a C-string to pass to printf().
+                </p>
+                <h3>Goals</h3>
+                <ul>
+                    <li>Understand difference between C types and Objective-C
+                    types</li>
+                    <li>Be able to use NSArrays.</li>
+                    <li>Be able to recognize a problem and check for an
+                    existing class method, becasue there are a bazillion of
+                    them</li>
+                    <li>Solidify awesomeness and leethaxxorz skillz</li>
+                </ul>
+
+                <h1>DON'T. ADD. BINARIES. TO. THE. REPO.<br>EVER.</h1>
+                <p>Needed to be said twice</p>
+            </div>
+    </body>
+
+
+
+</html>
