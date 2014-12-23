@@ -1,0 +1,128 @@
+<html>
+	<head>
+		<title>Assignment 3</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="static/js/jquery.min.js"></script>
+		<script src="static/js/jquery.scrollzer.min.js"></script>
+		<script src="static/js/jquery.scrolly.min.js"></script>
+		<script src="static/js/skel.min.js"></script>
+		<script src="static/js/skel-layers.min.js"></script>
+		<script src="static/js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="static/css/skel.css" />
+			<link rel="stylesheet" href="static/css/style.css" />
+			<link rel="stylesheet" href="static/css/style-xlarge.css" />
+		</noscript>
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+	</head>
+    <body>
+        <div id="main">
+            <div class="container">
+                <header class="major">
+                    <h2>Assignment 3</h2>
+                    <h3>String formatting and operations. Yuy.</h3>
+                </header>
+                <p>
+                The old adage goes, 
+                <br>
+                "He who can tame a wild woman is impressive. 
+                <br>
+                Yet he who can index and substring by memory is feared."
+                <br>
+                <br>
+                Okay, that's not really an adage, but it should be.
+                <br>
+                String operations are some of the most important in any
+                programming language. Being able to manipulate strings is
+                required in almost all programs. Luckily, Objective-C makes
+                string operations relatively simple with all of its different
+                methods. Knowing the methods exist is the hardest part.
+                <br>
+                <br>
+                First off, we already know that a string must be set using a
+                pointer and be assigned to an Objective-C string (eg NSString
+                *fat = @"fat
+                apples").
+                Now time for some new stuff.
+                <br>
+                Objective-C contains 2 types of string classes: NSString, and
+                NSMutableString. NSString is immutable, ie it cannot be changed
+                after initialization. Such is obviously not true of its
+                counterpart. NSMutableString is a subclass of NSString, meaning
+                all NSString methods will work on NSMutableString. However, not
+                all of NSMutableString methods will work on NSString.
+                <br>
+                There are many different string operations. Examples include
+                enumeration, comparison, concatenation, searching, subdividing,
+                replacing, tokenizing, etc.
+                <br>
+                We will attempt to learn a good number of these.
+                </p>
+                <h3>The actual assignment</h3>
+                <h4>Part 1</h4>
+                <p>
+                Create 4 Objective-C strings (henceforth referred to as just
+                strings) containing "miv", "reverof", "si", and "efil" and
+                print out the strings in reverse. 
+                </p>
+                <h4>Part 2</h4>
+                <p>
+                Create an array containing the strings "middleSchoolJoe.mp4",
+                "babyjoe.mp4", and "babyjoe.mp4" (duplicated on purpose, because, I mean, who can have enough).
+                Then, write a function that enumerates the array and prints out
+                elements that are the same (index and value). Then, write a
+                function that prints out which elements have the same suffix.
+                </p>
+                <h4>Part 3</h4>
+                <p>
+                Create two strings "Fancy" and "Feast". Concatenate them into
+                one string and print out the new string.
+                </p>
+                <h4>Part 4</h4>
+                <p>
+                Create a string containing "He was number one". Then, create a
+                function that prints out that checks the string for the word
+                "number" and prints out the location of the word. Then, create
+                a new string by removing the word number from the existing
+                string (do not just create a new string with "he was one").
+                </p>
+                <h4>Part 5</h4>
+                <p>
+                Create a string "LEEEEEROYYYYYYYY JENKINSSSSSSS". Then, create
+                a function that finds the letter J in the string and returns a
+                substring from that letter until the end of the string. 
+                </p>
+                <h4>Part 6</h4>
+                <p>
+                Create a mutable string "Happy". Append the word "Feet". You're
+                welcome.
+                </p>
+                <h4>Part 7</h4>
+                <p>
+                Change all of the letters in the string "lEeEtHaXxOoRrZz" to
+                uppercase and print out the string. 
+                </p>
+
+                <h3>HINT</h3>
+                Always look for an existing method to help you complete a task.
+                It will make life much easier for you in the long run. 
+
+                <h3>Goals</h3>
+                <ul>
+                    <li>Learn how to use strings and manipulate strings with
+                    black magic</li>
+                    <li>Learn how to use string methods in Objective-C</li>
+                    <li>Learn how to whistle....[Charles
+                    learnWhistling]...still nope.</li>
+                    <li>Learn how to answer stupid hackathon questions about
+                    palindromes that are unfairly weighted for the amount of
+                    effort and frustration put into solving them.</li>
+                    <li>Learn how to cry silently at hackathons</li>
+                </ul>
+
+            </div>
+    </body>
+</html>
