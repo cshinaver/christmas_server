@@ -1,0 +1,250 @@
+<html>
+	<head>
+		<title>Assignment 4</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="static/js/jquery.min.js"></script>
+		<script src="static/js/jquery.scrollzer.min.js"></script>
+		<script src="static/js/jquery.scrolly.min.js"></script>
+		<script src="static/js/skel.min.js"></script>
+		<script src="static/js/skel-layers.min.js"></script>
+		<script src="static/js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="static/css/skel.css" />
+			<link rel="stylesheet" href="static/css/style.css" />
+			<link rel="stylesheet" href="static/css/style-xlarge.css" />
+		</noscript>
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+	</head>
+    <body>
+        <div id="main">
+            <div class="container">
+                <header class="major">
+                    <h2>Assignment 4</h2>
+                    <h3>Classes</h3>
+                </header>
+                <p>Classes. Ah Classes. The backbone of the Objective-C
+                framework, and some of the most oddly formatted pieces of
+                foundation in any programming langauge. Classes are what make
+                Objective-C what it is. They are how Objective-C is different
+                from C as well as how it is different from C++. Objective-C and
+                C++ implement classes in their own ways. In almost every
+                program you write, you will create a custom class in order to
+                encapsulate (ie wrap up) data and methods that do something
+                with that data. They can seem somewhat daunting at first, but
+                they become easier with practice. Classes let you define a
+                blueprint for an object. They're similar to the C type struct.
+                Once you have defined a class in a program, you can
+                "instantiate" instances of the class to use in the program. For
+                example, if I define a class Person that has the variables
+                NSString *name, int age, NSArray *rightToeNames, and NSString
+                *favoriteBahrainiOlympicHurdler, I can instantiate objects of
+                that class that have those different attributes. One instance
+                of that class could have a name of Joe and be age 19. Another
+                instance of that class could have name Ryan and have
+                rightToeNames be @[@"Jimmy", @"Maggie", @"Fred", @"Genghis",
+                @"Frodo"]. The objects encapsulate the data stored in their
+                properties.
+                <br>
+                <br>
+                Classes in Objective-C consist of two parts, an interface and
+                an implementation. In C, prototypes are declared for functions
+                at the top of the program so that the rest of the program is
+                aware of their existence and can invoke them without getting
+                compiling errors. These prototypes are also very helpful for
+                programmers coming into a legacy codebase (existing code that they
+                did not create but they need to use or make changes to it).
+                They tell a programmer what functions exist, what they do (if
+                you write good function names), what the function returns and
+                what types of data you can pass to the function itself. In
+                Objective-C, these prototypes are separated from their
+                implementations into another file. That way, instead of having
+                to read the lengthy implementation file with lots of
+                cryptic code, a new developer can merely read the header file
+                and know what functions already exist.
+                <br>
+                <br>
+                Objective-C classes have two main files. The interface of
+                an Objective-C class is stored in a header file (.h suffix) and contains 
+                all the prototypes and variables for a class. These variables can be
+                instance variables or properties (more on those later). The
+                implementation for a class is stored in the implementation
+                file (.m suffix). The implementation file contains all the
+                definitions for the methods (name for functions that are part
+                of a class) of the class. But more on zat laterz. Time for the
+                examples.
+                </p>
+                <h2>PULL THE LEVER KRONK</h2>
+                <br>
+                <p>Say I wanted to make a class Person like the one I mentioned
+                above. I'll give it the above attributes as well as the method
+                makeCryingNoise(). Note: I will define the attributes of the
+                class using properties instead of instance variables
+                (technically the properties are assigning values to the
+                instance variables). You can read more about this
+                <a href="https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/EncapsulatingData/EncapsulatingData.html">here</a>
+                . It is always preferable to use properties 
+                instead of instance variables.
+                <br>
+                The first part of the file is the interface, which will contain
+                properties and method prototype declarations.
+                <br>
+                <br>
+                // In Person.h
+                <br>
+                //
+                <br>
+                <br>
+                #import &lt;Foundation/Foundation.h&gt;
+                <br>
+                <br>
+                @interface Person : NSObject 
+                <br> // All Objective-C classes must inherit from another class. 
+                Almost always use NSObject.
+                <br>
+                <br>
+                @property NSString *name;
+                <br>
+                @property int age;
+                <br>
+                @property NSArray *rightToeNames;
+                <br>
+                @property NSString *favoriteBahrainiOlympicHurdler;
+                <br>
+                - (void) makeCryingNoise((NSString *)noise
+                repetitionAmount:(int)repetitions);
+                <br>
+                <br>
+                <br>
+                @end
+                <br>
+                <br>
+                Objective-C method syntax: 
+                <br>
+                minusOrPlusForClassOrInstanceMethod (returnType)
+                functionName:(typeOfArgument1)argument1
+                secondArgumentSeparator:(typeOfArgument2)argument2
+                <br>
+                The above is all one line (see my actual method for an
+                example)
+                <br>
+                Note a few things:
+                <br>
+                One, there is a minus or plus at the beginning.
+                <br>
+                Two, arguments are not specified inside () as in C. They follow
+                a colon. To declare a method without arguments, you would do -
+                (void) myMethod;
+                <br>
+                Three, multiple arguments are not separated by commas. They are
+                separated by word separators specified by the method's creator
+                (in this case, it's me).
+                <br>
+                The first argument doesn't have a word separator.
+                <br>
+                <br>
+                This would be the corresponding implementation (.m) file.
+                <br>
+                <br>
+                // In Person.m
+                <br>
+                //
+                <br>
+                <br>
+                #import &lt;Foundation/Foundation.h&gt;
+                <br>
+                <br>
+                @implementation Person
+                <br>
+                <br>
+                - (void) makeCryingNoise:(NSString *)noise
+                repetitionAmount:(int)repetition
+                <br>
+                {
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;for (int i = 0; i  &lt; repetition; i++)
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;{
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NSLog(@"%@
+                cries %@", self.name noise);
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;}
+                <br>
+                }
+                <br>
+                <br>
+                @end
+                <br>
+                <br>
+                <br>
+                Then, in my main file, I could import and use the class. I'll
+                create a Person joe, set his name, age, right toe names, and
+                favorite Bahraini Olympic hurdler.
+                <br>
+                // in main.m
+                <br>
+                //
+                <br>
+                <br>
+
+                #import &lt;Foundation/Foundation.h&gt;
+                <br>
+                #import "Person.h"
+                <br>
+                <br>
+                int main ()
+                <br>
+                {
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp; Person *joe = [[Person alloc] init];
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;// Allocate memory from the class and
+                initialize the variable (just do it)
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;joe.name = @"Joe Moran";
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;joe.age = 19;
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;joe.rightToeNames = @[@"Hans von
+                Aachen", @"Ernst Barlach", @"Johann Gottlieb Hantzsch", @"Vicco
+                von Bulow", @"Fred"];
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;joe.favoriteBahrainiOlympicHurdler =
+                @"Ahmed Hamada Jassim";
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;[joe makeCryingNoise:@"Deutsch cry"
+                repetitionAmount:4];
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;return 0;
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <br>
+                } 
+
+                <h3>The actual assignment</h3>
+                Create a class CompSciStudent that has four properties:
+                favoriteTextEditor, age, sexynessLevel, and googleFuLevel.
+                Then (ooo, this will be somewhat tricky), add a method that
+                takes another instance of the CompSciStudent class, compares
+                their sexinessLevels, and returns the favoriteTextEditor of
+                the coder with the highest sexinessLevel.
+                <h3>Goals</h3>
+                <ul>
+                    <li>Be able to construct and use Objective-C classes</li>
+                    <li>Understand the syntax of methods</li>
+                    <li>Determine greatest code editor</li>
+                    <li>Learn to Fly - Foo Fighters</li>
+                </ul>
+                <br>
+                <br>
+                Peace boyz. And Mary.
+            </div>
+    </body>
+</html>
