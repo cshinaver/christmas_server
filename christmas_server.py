@@ -29,5 +29,11 @@ def assign3():
 def assign4():
     return render_template('assign4.html')
 
+
+@app.route("/assignments/assign5.html")
+def assign5():
+    return render_template('assign5.html')
+
+
 if __name__ == "__main__":
     app.run()
