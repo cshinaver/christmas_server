@@ -35,5 +35,10 @@ def assign5():
     return render_template('assign5.html')
 
 
+@app.route("/assignments/assign6.html")
+def assign6():
+    return render_template('assign6.html')
+
+
 if __name__ == "__main__":
     app.run()
